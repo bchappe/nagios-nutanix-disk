@@ -23,7 +23,7 @@ if element['disk_status'] != <b> "NORMAL" </b> or str(element<b>['online']) != "
 ### Examples <br>
 ``` 
 request_nutanix_disk.py --help
-request_nutanix_disk.py 192.168.1.1 api_test mypassword 9443
+request_nutanix_disk.py 192.168.1.1 mylogin mypassword 9443
 ``` 
 
 
@@ -34,7 +34,7 @@ request_nutanix_disk.py 192.168.1.1 api_test mypassword 9443
 <br>
 
 - Authorize the owner and groups nagios to launch it <br>
-- Authorize the file to be execute
+- Authorize the file to be execute with apache:nagios 
 ``` 
 chown apache:nagios request_nutanix_disk.py <br>
 -rwxr-xr-x apache nagios request_nutanix_disk.py 
@@ -43,7 +43,7 @@ chmod +x request_nutanix_disk.py
 
 Call the nutanix API with request <br>
 ``` 
- ./request_nutanix_disk.py $IP $LOGIN $PASSWORD $PORT <br>
+ request_nutanix_disk.py $IP $LOGIN $PASSWORD $PORT <br>
  ``` 
  You can help, with ./request_nutanix_disk.py --help
 
